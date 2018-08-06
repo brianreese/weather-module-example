@@ -1,0 +1,5 @@
+name: 'Weather widget example module'
+type: module
+description: 'Example module for the GovCon 2018 ES6 session.'
+core: '8.x'
+package: Example

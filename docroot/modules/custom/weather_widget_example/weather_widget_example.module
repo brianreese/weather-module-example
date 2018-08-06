@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the weather_widget_example module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function weather_widget_example_theme() {
+  return [
+    'weather_forecast' => [
+      'variables' => [
+        'zip' => '10027',
+      ],
+    ],
+  ];
+}
