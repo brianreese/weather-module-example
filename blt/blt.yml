@@ -1,7 +1,7 @@
 project:
-  machine_name: weather-module-example
-  prefix: BLT
-  human_name: 'BLTed 8'
+  machine_name: weather-widget-example
+  prefix: DEMO
+  human_name: 'Weather Widget Example Site'
   profile:
     name: lightning
   local:
