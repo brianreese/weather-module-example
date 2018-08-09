@@ -1,0 +1,9 @@
+weather_icons:
+  css:
+    theme:
+      '//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css': { external: true }
+weather_widget:
+  js:
+    'js/dist/weather.js': {}
+  dependencies:
+    - weather_widget_example/weather_icons

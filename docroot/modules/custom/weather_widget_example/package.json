@@ -15,5 +15,8 @@
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "webpack-stream": "^5.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }
