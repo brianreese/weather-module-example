@@ -74,18 +74,18 @@ class WeatherWidget {
   }
 
   static renderHeader(location) {
-    return `<h2>${location.city}, ${location.region}</h2>`;
+    return `<h2 class="weather-header">${location.city}, ${location.region}</h2>`;
   }
 
   static renderWeatherCard(date, weatherCode, low, high) {
     let iconClass = WeatherIcons.getIconClass(weatherCode);
     let conditions = WeatherIcons.getDescription(weatherCode);
-    return `<div>
+    return `<div class="weather-card">
       <i class="wi ${iconClass}"></i>
-      <h4>${date}</h4>
-      <span>${conditions}</span>
-      <span>High: ${high}</span>
-      <span>Low: ${low}</span>
+      <h4 class="weather-card-date">${date}</h4>
+      <div>${conditions}</div>
+      <div>High: ${high}</div>
+      <div>Low: ${low}</div>
     </div>`
   }
 
