@@ -1,0 +1,5 @@
+weather:
+  js:
+    js/weather.js: {}
+  dependencies:
+    - weather_widget_example/weather_widget

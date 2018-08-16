@@ -1,0 +1,4 @@
+name: Theme override example
+description: Demonstrate overriding js theme functions provided by the weather_widget_example module.
+type: module
+core: 8.x
