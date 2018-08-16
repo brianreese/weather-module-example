@@ -65,7 +65,8 @@ class WeatherWidget {
     container.innerHTML = this.constructor.renderHeader(weatherData.channel.location);
     const forecastData = ((weatherData.channel.item || {}).forecast || []);
     forecastData.forEach(day => {
-      container.innerHTML += this.constructor.renderWeatherCard(day.day, day.code, day.low, day.high);
+      let dateString = new Date(day.date).toLocaleString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+      container.innerHTML += this.constructor.renderWeatherCard(dateString, day.code, day.low, day.high);
     })
 
     // Render the widget to the dom.
