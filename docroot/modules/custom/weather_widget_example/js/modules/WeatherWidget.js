@@ -5,7 +5,11 @@
 
 import WeatherIcons from "./WeatherIcons";
 import WeatherService from './WeatherService';
+import GeolocationService from './GeolocationService';
+
+const GEOLOCATION_API_KEY = 'xxxxxx'; // @todo: This should be configurable and probably doesn't belong here.
 const weatherService = new WeatherService();
+const geolocationService = new GeolocationService(GEOLOCATION_API_KEY);
 
 /**
  * Class WeatherWidget.
@@ -46,12 +50,11 @@ class WeatherWidget {
   /**
    * Renders weather data in the weather widget.
    *
-   * @param data
+   * @param weatherData
    *   Weather data returned from the weather service.
    */
-  render(data) {
-    console.log(data);
-    if (!data.channel) {
+  render(weatherData) {
+    if (!weatherData.channel) {
       // @todo: api response was not what we expected.
       return;
     }
@@ -59,16 +62,13 @@ class WeatherWidget {
     let container = document.createElement('div');
     container.classList.add('weather-widget--inner');
 
-    container.innerHTML = this.constructor.renderHeader(data.channel.location);
-    const forecastData = ((data.channel.item || {}).forecast || []);
+    container.innerHTML = this.constructor.renderHeader(weatherData.channel.location);
+    const forecastData = ((weatherData.channel.item || {}).forecast || []);
     forecastData.forEach(day => {
       container.innerHTML += this.constructor.renderWeatherCard(day.day, day.code, day.low, day.high);
     })
-    console.log(forecastData);
 
-
-
-    // @todo: render the widget to the dom.
+    // Render the widget to the dom.
     this.widget.innerHTML = '';
     this.widget.append(container);
   }
@@ -94,8 +94,9 @@ class WeatherWidget {
    */
   async refresh() {
     // @todo: fetch weather data from the weather service, then render it.
-    const data = await weatherService.getWeatherData(10027);
-    this.render(data);
+    const location = await geolocationService.getLocationData();
+    const forecast = await weatherService.getWeatherData(location.zip);
+    this.render(forecast);
   }
 
 }
