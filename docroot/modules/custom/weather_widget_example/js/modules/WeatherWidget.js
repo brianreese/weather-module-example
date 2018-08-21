@@ -31,7 +31,7 @@ class WeatherWidget {
   /**
    * Factory method to create a new WeatherWidget instance.
    *
-   * @param {HTMLElement} widget
+   * @param {Node} widget
    *   The weather widget DOM element required by the WeatherWidget constructor.
    *
    * @returns {WeatherWidget}
@@ -45,6 +45,16 @@ class WeatherWidget {
     // since we're not doing anything with the resolved promise, no need to wait.
     instance.refresh();
     return instance;
+  }
+
+  /**
+   * Get weather data then render the widget.
+   */
+  async refresh() {
+    // @todo: fetch weather data from the weather service, then render it.
+    const location = await geolocationService.getLocationData();
+    const forecast = await weatherService.getWeatherData(location.zip);
+    this.render(forecast);
   }
 
   /**
@@ -88,16 +98,6 @@ class WeatherWidget {
       <div>High: ${high}</div>
       <div>Low: ${low}</div>
     </div>`
-  }
-
-  /**
-   * Get weather data then render the widget.
-   */
-  async refresh() {
-    // @todo: fetch weather data from the weather service, then render it.
-    const location = await geolocationService.getLocationData();
-    const forecast = await weatherService.getWeatherData(location.zip);
-    this.render(forecast);
   }
 
 }

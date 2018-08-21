@@ -17,7 +17,9 @@ import WeatherWidget, { DEFAULTWIDGETSELECTOR } from '../modules/weatherWidget';
     attach: context => {
       const widgetElements = context.querySelectorAll(DEFAULTWIDGETSELECTOR);
       if (widgetElements) {
-        Array.from(widgetElements).forEach(WeatherWidget.create);
+        Array.from(widgetElements).forEach(element => {
+          WeatherWidget.create(element);
+        });
       }
     }
   }
