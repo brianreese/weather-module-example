@@ -5,6 +5,12 @@ features, as well as how to set up a module or theme to take advantage of ES6 js
 modules. See the example module at
 `docroot/modules/custom/weather_widget_example`
 
+Before getting started, please note that you'll **need to provide your own (free)
+api key** for the geolocation service used by the weather module! Head over to
+ipstack.com to get an api key, then search and replace the `<insert_key_here>`
+placeholder in
+`docroot/modules/custom/weather_widget_example/js/modules/WeatherWidget.js`
+
 Feel free to use the *Getting Started* instructions below to set up a simple
 demo site, or copy the `weather_widget_example` module to your own project. 
 
