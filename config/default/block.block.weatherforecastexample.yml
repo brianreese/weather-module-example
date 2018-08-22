@@ -1,0 +1,20 @@
+uuid: 849a0e0b-b016-4003-a8d9-e00b862bb4c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather_widget_example
+  theme:
+    - bartik
+id: weatherforecastexample
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: weather_forecast
+settings:
+  id: weather_forecast
+  label: 'Weather forecast example'
+  provider: weather_widget_example
+  label_display: '0'
+visibility: {  }
