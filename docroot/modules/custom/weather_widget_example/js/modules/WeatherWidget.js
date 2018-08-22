@@ -7,7 +7,8 @@ import WeatherIcons from "./WeatherIcons";
 import WeatherService from './WeatherService';
 import GeolocationService from './GeolocationService';
 
-const GEOLOCATION_API_KEY = 'xxxxxx'; // @todo: This should be configurable and probably doesn't belong here.
+// Visit ipstack.com and get a (free) api key for their ip geolocation service.
+const GEOLOCATION_API_KEY = '<insert_key_here>';
 const weatherService = new WeatherService();
 const geolocationService = new GeolocationService(GEOLOCATION_API_KEY);
 
