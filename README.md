@@ -1,20 +1,15 @@
-# My Project
+# ES6 JS example for govcon 2018
 
-A brief description of My Project.
+This project contains a custom weather module, demonstrating some es6 language
+features, as well as how to set up a module or theme to take advantage of ES6 js
+modules. See the example module at
+`docroot/modules/custom/weather_widget_example`
 
-## Using This Template
+Feel free to use the *Getting Started* instructions below to set up a simple
+demo site, or copy the `weather_widget_example` module to your own project. 
 
-Remove this section after initial setup!
-
-Search for and replace the following placeholders:
-
-* \<organization>
-* \<project>
-* \<project local url>
-* \<local environment>
-* \<project key>
-* \<branch>
-* \<provide link>
+Note: if you're copying the example module to your own project, be sure to run
+`gulp` to generate its assets.
 
 ## Getting Started
 
@@ -30,11 +25,11 @@ This project is based on BLT, an open-source project template and tool that enab
     * [Setup Acquia Cloud SSH Keys](https://docs.acquia.com/acquia-cloud/ssh/generate)
 * Clone your forked repository. By default, Git names this "origin" on your local.
 ```
-$ git clone git@github.com:<account>/<project>.git
+$ git clone git@github.com:<account>/weather-module-example.git
 ```
 * To ensure that upstream changes to the parent repository may be tracked, add the upstream locally as well.
 ```
-$ git remote add upstream git@github.com:<organization>/<project>.git
+$ git remote add upstream git@github.com:darkcody/weather-module-example.git
 ```
 * Install Composer Dependencies (warning: this can take some time based on internet speeds)
 ```
@@ -51,7 +46,7 @@ For instructions on setting up Drupal VM, (read our documentation here)[http://b
 $ vagrant ssh
 $ blt setup
 ``` 
-* Access the site and do necessary work at \<project local url> by running
+* Access the site and do necessary work at \http://local.weather-widget-example.com/ by running
 
 ```
 $ drush uli
@@ -63,9 +58,8 @@ $ blt
 ``` 
 
 Note the following properties of this project:
-* Primary development branch: \<branch>
-* Local environment: \<local environment>
-* Local site URL: \<project local url>
+* Local environment: \local
+* Local site URL: \http://local.weather-widget-example.com/
 
 ## Working With a BLT Project
 
@@ -82,10 +76,3 @@ BLT uses a number of configuration (.yml or .json) files to define and customize
 * box/config.yml (if using Drupal VM)
 * drush/sites (contains Drush aliases for this project)
 * composer.json (includes required components, including Drupal Modules, for this project)
-
-## Resources
-
-* JIRA - \<provide link>
-* GitHub - \<provide link>
-* Acquia Cloud subscription - \<provide link>
-* TravisCI - \<provide link>
