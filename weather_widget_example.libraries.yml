@@ -1,0 +1,13 @@
+weather_icons:
+  css:
+    theme:
+      '//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css': { external: true }
+weather_widget:
+  css:
+    component:
+      'css/weatherCard.css': {}
+  js:
+    'js/dist/weather.js': {}
+  dependencies:
+    - core/drupal
+    - weather_widget_example/weather_icons

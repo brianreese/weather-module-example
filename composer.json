@@ -1,0 +1,24 @@
+{
+  "name": "drupal/weather_module_example",
+  "description": "A silly weather oriented module, demonstrating JS techniques for Drupal.",
+  "type": "drupal-module",
+  "keywords": [
+    "Drupal",
+    "Brian Reese",
+    "brianreese",
+    "govcon",
+    "js",
+    "examples"
+  ],
+  "homepage": "https://www.drupalgovcon.org/2018/program/sessions/transitioning-your-drupal-8-site-es6",
+  "authors": [
+    {
+      "name": "Brian Reese",
+      "homepage": "https://www.drupal.org/u/brianreese",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/core": "^8.6.0 || ^9.0"
+  }
+}
